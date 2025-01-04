@@ -18,7 +18,7 @@ jobs:
         org: 'antennapod'
         repo: 'antennapod'
         version: '3.6.0'
-        bundle: false
+        bundle: true
         filename: 'antennapod.apk'
     - name: Upload artifact
       uses: actions/upload-artifact@v4

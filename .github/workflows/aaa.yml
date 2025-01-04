@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: get
-      run: curl https://www.apkmirror.com/apk/antennapod/antennapod/antennapod-3-6-1-release/antennapod-3-6-1-android-apk-download/download/?key=facb26b6283e3c1f876444c5334e9e0ad7a0c074 -o
+      run: curl https://www.apkmirror.com/apk/antennapod/antennapod/antennapod-3-6-1-release/antennapod-3-6-1-android-apk-download/download/?key=facb26b6283e3c1f876444c5334e9e0ad7a0c074 -o a.apk
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4

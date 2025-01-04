@@ -1,0 +1,30 @@
+name: get aaa
+on:
+  workflow_dispatch:
+    inputs:
+      docker_images:
+        description: 'a版本号'
+        required: false
+        default: 'alpine:latest'  # 设置默认的 Docker 镜像列表
+
+jobs:
+  pull_and_package:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: get
+      run: curl https://www.apkmirror.com/apk/antennapod/antennapod/antennapod-3-6-1-release/antennapod-3-6-1-android-apk-download/download/?key=facb26b6283e3c1f876444c5334e9e0ad7a0c074 -o .
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: a
+        path: a.apk
+        retention-days: 1  # 将保留天数设置为 1 天 最多可设置90天
+
+    - name: Clean up intermediate files
+      run: |
+        rm a.apk

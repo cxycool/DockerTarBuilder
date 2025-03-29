@@ -16,9 +16,9 @@ jobs:
       uses: Yakov5776/gh-apkmirror-dl@v1.3
       with:
         org: 'dream-games-ltd-2'
-        repo: 'royal-match'
-        version: '27443' #默认latest
-        bundle: false
+        repo: 'Royal Match'
+        version: '27901' #默认latest
+        bundle: true
         filename: 'royal-match.apk'
     - name: Upload artifact
       uses: actions/upload-artifact@v4

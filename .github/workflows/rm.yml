@@ -17,7 +17,7 @@ jobs:
       with:
         org: 'dream-games-ltd-2'
         repo: 'royal-match'
-        version: '26821' #默认latest
+        version: 'latest' #默认latest
         bundle: true
         filename: 'royal-match.apk'
     - name: Upload artifact

@@ -20,11 +20,17 @@ jobs:
           version: '17.126.6'
           bundle: false
           filename: 'clash-of-clans.apk'
+      - name: List generated files (debug step)
+        run: |
+          echo "Preparing docker images list (.apk) files:"
+          find $GITHUB_WORKSPACE -name "*.apk"
+          release_name=$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M Build')
+          echo "RELEASE_NAME=$release_name" >> $GITHUB_ENV
       - name: Upload Docker images as release assets
         uses: softprops/action-gh-release@v2.1.0
         with:
           tag_name: DockerTarBuilder-ARM64
-          files: coc.zip
+          files: clash-of-clans.apk
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

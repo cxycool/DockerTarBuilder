@@ -17,7 +17,7 @@ jobs:
       with:
         org: 'dream-games-ltd-2'
         repo: 'royal-match'
-        version: '22546'
+        version: '28115'
         bundle: false
         filename: 'royal-match.apk'
     - name: Upload artifact
